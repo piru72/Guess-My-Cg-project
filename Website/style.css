@@ -1,139 +1,123 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+    margin: 0;
+    padding: 0;
 }
-body {
-  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
-  color: white;
-  font-family: "Poppins", sans-serif;
-  min-height: 100vh;
-}
-header {
-  font-size: 2rem;
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+
 }
 
-header,
-form {
-  min-height: 20vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-form input,
-form button {
-  padding: 0.5rem;
-  font-size: 2rem;
-  border: none;
-  background: white;
-}
-form button {
-  color: #ff6f47;
-  background: #f7fffe;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-form button:hover {
-  background: #ff6f47;
-  color: white;
-}
-.todo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+body{
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: sans-serif;
 }
 
-.todo-list {
-  min-width: 30%;
-  list-style: none;
+.form {
+    width: 80%;
+    position: relative;
+    height: 5rem;
+    overflow: hidden;
+    
 }
 
-.todo {
-  margin: 0.5rem;
-  background: white;
-  font-size: 1.5rem;
-  color: black;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: all 1s ease;
-}
-.filter-todo {
-  padding: 1rem;
-}
-.todo li {
-  flex: 1;
+.form input{
+    width: 100%;
+    height: 100%;
+    padding-top: .2rem;
+    border: none;
+    outline: none;
 }
 
-.trash-btn,
-.complete-btn {
-  background: #ff6f47;
-  color: white;
-  border: none;
-  padding: 1rem;
-  cursor: pointer;
-  font-size: 1rem;
+.form label{
+    position: absolute;
+    bottom: 0rem;
+    left: 0rem;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: .1rem solid #ffcd19;
+    
+    
 }
-.complete-btn {
-  background: rgb(11, 212, 162);
-}
-.todo-item {
-  padding: 0rem 0.5rem;
-}
-
-.fa-trash,
-.fa-check {
-  pointer-events: none;
-}
-
-.fall {
-  transform: translateY(10rem) rotateZ(20deg);
-  opacity: 0;
+.form label::after{
+    content: "";
+    position: absolute;
+    left: -.1rem;
+    bottom: -.1rem;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid #f15c58;
+    transform:translateX(-100%);
+    transition:  transform all .3s ease;
+    
 }
 
-.completed {
-  text-decoration: line-through;
-  opacity: 0.5;
+.content-name{
+    position: absolute;
+    align-items: center;
+    bottom: .2rem;
+    left: 0rem;
+    transition: all 0.3s ease;
+    color:  #000000;
+    font-weight: 600;
+    text-align: center;
+    /* problem starter
+    background-color: #ffcd19;
+    padding: .2rem; */
+    display: flex;
+    
 }
 
-/*CUSTOM SELECTOR */
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  outline: 0;
-  box-shadow: none;
-  border: 0 !important;
-  background-image: none;
+.form input:focus + .label-name .content-name , 
+.form input:valid + .label-name .content-name{
+    transform: translatey(-110%);
+    font-size: 1.4rem;
+    color: #f15c58;
+    font-weight: bold;
+    align-items: center;
 }
 
-/* Custom Select */
-.select {
-  margin: 1rem;
-  position: relative;
-  overflow: hidden;
+.form input:focus + .label-name::after ,
+.form input:valid + .label-name::after{
+    transform: translateX(0%);
+
 }
-select {
-  color: #ff6f47;
-  font-family: "Poppins", sans-serif;
-  cursor: pointer;
-  width: 12rem;
+
+h1{
+    color: #f15c58;
 }
-/* Arrow */
-.select::after {
-  content: "\25BC";
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 1rem;
-  background: #ff6f47;
-  cursor: pointer;
-  pointer-events: none;
+
+/*===============button=========*/
+.btn:link,
+.btn:visited,
+.btn{
+    background-color: #f15c58;
+    border-bottom: .3rem solid rgb(165, 76, 3);
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 1.5rem 6rem;
+    border-radius: .5rem;
+    display: inline-block;
+    margin-top: 4.5rem;
+    font-size: 1.6rem;
+    transition: .4s;
+
 }
-/* Transition */
-/*
-.select:hover::after {
-  transform: scale(1.5);
+.btn:hover {
+    box-shadow: 0 .8rem 1rem 0 rgba(255, 0, 0, 0.24), 0 1.2rem 1.3rem 0 rgba(255, 0, 0, 0.19);
 }
-*/
+.hero-text-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    height: 1rem;
+}
+
