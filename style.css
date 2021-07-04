@@ -4,6 +4,7 @@
 }html{
     font-size: 62.5%;
     scroll-behavior: smooth;
+    background-color: #303436;
 }
 body{
     height: 60vh;
@@ -17,12 +18,24 @@ h1{
     color: #f15c58;
     align-self: auto;
 }
+.input-group-text{
+    width: 45vw;
+    padding: 5%;
+    margin: 1vh;
+}
+
+.dropdown-toggle
+{
+    margin:1vh;
+    padding: 5%;
+}
+
 /*===============button=========*/
 .btn:link,
 .btn:visited,
 .btn{
-    background-color: #f15c58 ;
-    border-bottom: .3rem solid rgb(165, 76, 3);
+    background-color: #CB1F34 ;
+    border-bottom: .3rem solid rgb(165, 3, 3);
     color: white;
     text-decoration: none;
     text-transform: capitalize;
@@ -31,11 +44,11 @@ h1{
     display: flex;  
 }
 .btn:hover {
-    box-shadow: 0 .8rem 1rem 0 rgba(255, 0, 0, 0.24), 0 1.2rem 1.3rem 0 rgba(255, 0, 0, 0.19);
+    box-shadow: 0 .8rem 1rem 0 rgba(0, 0, 0, 0.24), 0 1.2rem 1.3rem 0 rgba(8, 5, 5, 0.19);
 }
 .hero-text-box{
     position: relative;
-    top: 50%;
+    top: 600%;
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
@@ -43,8 +56,7 @@ h1{
 }
 .dropdown-item{
     width:fit-content;
-    background-color: #f15c58;
-    
+    background-color: #f15c58;  
 }
 
 .dropdown-menu{
@@ -55,5 +67,26 @@ h1{
     background-color: #f15c58;
     color: #f15c58;
 }
+.grade-option{
+    background-color: #f15c58;
+    color: #f15c58;
+}
+dropdownMenuButton1{
+    background-color: #f15c58;
+    color: #f15c58;
+}
+.dropdown-toggle{
+    background-color: #f15c58;
+    color: #f15c58;
+}
+.dropdown-menu{
+    background-color: #f15c58;
+    color: #f15c58;
 
+}
+.form-control{
+    margin:1vh;
+    padding: 5vh;
+    height: 10%; 
+}
 
