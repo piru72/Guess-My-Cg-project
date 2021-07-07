@@ -16,19 +16,19 @@
 
 	<h3 id="po">Input The Grades Elements</h3>
 	<form class="" action="index.html" method="post">
-		<input type="text" name="array[]" value="" /><br>
-		<input type="text" name="array[]" value="" /><br>
-		<input type="text" name="array[]" value="" /><br>
-		<input type="text" name="array[]" value="" /><br>
-		<input type="text" name="array[]" value="" /><br>
-        <input type="text" name="array[]" value="" /><br>
-        <input type="text" name="array[]" value="" /><br>
-        <input type="text" name="array[]" value="" /><br>
-        <input type="text" name="array[]" value="" /><br>
+		<input type="text" name="array[]" value="" placeholder="3.0 credit course grade"/><br>
+		<input type="text" name="array[]" value="" placeholder="3.0 credit course grade"/><br>
+		<input type="text" name="array[]" value="" placeholder="3.0 credit course grade"/><br>
+		<input type="text" name="array[]" value="" placeholder="3.0 credit course grade"/><br>
+		<input type="text" name="array[]" value="" placeholder="3.0 credit course grade"/><br>
+        <input type="text" name="array[]" value="" placeholder="1.5 credit course grade"/><br>
+        <input type="text" name="array[]" value="" placeholder="1.5 credit course grade"/><br>
+        <input type="text" name="array[]" value="" placeholder="1.5 credit course grade"/><br>
+        <input type="text" name="array[]" value="" placeholder=".75 credit course grade"/><br>
 
 
 		<button type="button" name="button" onclick="Geeks()">
-			Submit
+			Calculate
 		</button>
 	</form>
 	<br>
@@ -37,18 +37,28 @@
 
 	<script type="text/javascript">
 
-		var k = "The Result is :";
+		var k = "Your Result is : ";
 
 		function Geeks() {
 			var input = document.getElementsByName('array[]');
 
 			for (var i = 0; i < input.length; i++) {
 				var a = input[i];
-				k = k + "array[" + i + "].value= "
-								+ a.value + " ";
+				
+				if(a.value == "c" )
+					k = k + "Helo";
+				else
+						k = k + "kalo";
+					
+
+				// if(a.value .localeCompare(st))
+								
 			}
+			
+		
 
 			document.getElementById("par").innerHTML = k;
+		
 			document.getElementById("po").innerHTML = "Output";
 		}
 	</script>
