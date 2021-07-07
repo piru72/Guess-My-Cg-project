@@ -14,6 +14,13 @@
   </head>
   <body>
 
+
+    <button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+
+    <p id="demo">JavaScript can change HTML content.</p>
+
+    <button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+
     <h1> Tensed about the cg ? Put the grades. </h1>
 
     <div class="input-group">
@@ -223,6 +230,31 @@
         <a href="https://www.facebook.com/piru72" class="btn btn-hero">Calculate</a>
   </div>
 </div>
+
+<button type="button" name="button" onclick="Geeks()">
+  Submit
+</button>
+</form>
+
+<p id="par"></p>
+
+	<script type="text/javascript">
+
+		var k = "The Result is :";
+
+		function Geeks() {
+			var input = document.getElementsByClassName('dropdown-item');
+
+			for (var i = 0; i < input.length; i++) {
+				var a = input[i];
+				k = k + "array[" + i + "].value= "
+								+ a.value + " ";
+			}
+
+			document.getElementById("par").innerHTML = k;
+			document.getElementById("po").innerHTML = "Output";
+		}
+	</script>
 
 
 
