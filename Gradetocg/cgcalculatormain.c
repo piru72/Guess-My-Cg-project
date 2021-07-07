@@ -3,7 +3,7 @@
 
 float grade_to_point(char *ptr)
 {
-         if     (strcmp(ptr,"A+") == 0 || strcmp(ptr,"a+") == 0)  return 4.00;    
+        if      (strcmp(ptr,"A+") == 0 || strcmp(ptr,"a+") == 0)  return 4.00;    
         else if (strcmp(ptr,"A")  == 0 || strcmp(ptr,"a")  == 0)  return 3.75;
         else if (strcmp(ptr,"A-") == 0 || strcmp(ptr,"a-") == 0)  return 3.50;
         else if (strcmp(ptr,"B+") == 0 || strcmp(ptr,"b+") == 0)  return 3.25;
