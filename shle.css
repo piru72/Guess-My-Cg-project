@@ -1,23 +1,44 @@
 *{
     margin: 0;
     padding: 0;
-}html{
-    font-size: 62.5%;
+}
+html{
+    /*font-size: 62.5%;*/
     scroll-behavior: smooth;
-    background-color: #303436;
+    /*colors
+    #00B373
+    #2E2F3E*/
+    background-color: #2E2F3E;
+    backface-visibility: visible;
+
 }
 body{
-    height: 60vh;
+    height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-family: sans-serif;
-}
+    background-color: #303436
+} 
+
 h1{
-    color: #f15c58;
+    color: #00B373;
     align-self: auto;
+    font-size: xx-large;
+    font-weight: 900;
 }
+h3{
+    color: #00B373;
+    align-self: auto;
+    font-size: larger;
+}
+.box {
+    background-color: #b30f00;
+    color : #2bb8ff;
+
+}
+
 .input-group-text{
     width: 45vw;
     padding: 5%;
@@ -31,6 +52,7 @@ h1{
 }
 
 /*===============button=========*/
+/*
 .btn:link,
 .btn:visited,
 .btn{
@@ -89,4 +111,5 @@ dropdownMenuButton1{
     padding: 5vh;
     height: 10%; 
 }
+*/
 
